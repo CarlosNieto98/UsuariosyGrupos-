@@ -1,0 +1,32 @@
+** CREAMOS LOS USUARIOS QUE AGREGAREMOS A LOS GRUPOS, PERO DEBEMOS ESTAR EN "SU".
+
+su
+useradd Karla
+useradd Carlos
+
+** VERIFICAMOS LA CREACIÓN DE LOS NUEVOS USUARIOS
+
+cat /etc/passwd
+
+** CREAMOS EL GRUPO
+
+groupadd Casa
+
+** Verificamos la creación del grupo
+
+cat /etc/group
+
+** AÑADIMOS LOS USUARIOS AL GRUPO "Casa"
+
+adduser Karla Casa
+adduser Carlos Casa
+
+** MODIFICAMOS EL NOMBRE DEL GRUPO "Casa"
+
+groupmod -n Familia Casa
+
+** Verificamos la modificación
+
+cat /etc/group
+
+Estudiante:Carlos Javier Nieto Madrid SMIS011116
